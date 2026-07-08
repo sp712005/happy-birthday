@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Memories | Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="profile-screen" class="screen">
+        <h1>Who's watching?</h1>
+        <div class="profiles">
+            <div class="profile" onclick="enterSite()">
+                <img src="her-photo.jpg" alt="Birthday Girl">
+                <p>Birthday Girl 🎉</p>
+            </div>
+            <div class="profile" onclick="op()">
+                <img src="lock.webp" alt="Secret">
+                <p>Top Secret 🔒</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-screen" class="screen hidden">
+        
+        <header>
+            <div class="logo">MEMFLIX</div>
+            <div class="nav-profile"><img src="her-photo.jpg" alt="Profile"></div>
+        </header>
+
+        <!-- Big Feature Image/Text with Background Video -->
+        <div class="hero">
+            <video id="bg-video" autoplay muted playsinline></video>
+            <div class="hero-overlay"></div>
+            
+            <button id="close-story-btn" class="close-story-btn hidden" onclick="closeStory()">✖ Close</button>
+            
+            <div class="hero-content">
+                <h2>Happy Birthday! 🎂</h2>
+                <p>Grab some popcorn. Here are the best moments of our favorite season so far.</p>
+                <button class="play-btn" onclick="playOurStory()">▶ Play Our Story</button>
+            </div>
+        </div>
+        <div class="row">
+            <h3>Top 10 Reasons I Love You Today</h3>
+            <div class="media-scroller trending-scroller">
+                
+                <div class="trending-item">
+                    <span class="trending-number">1</span>
+                    <img src="top1.jpg" alt="Reason 1">
+                </div>
+
+                <div class="trending-item">
+                    <span class="trending-number">2</span>
+                    <img src="top2.jpg" alt="Reason 2">
+                </div>
+
+                <div class="trending-item">
+                    <span class="trending-number">3</span>
+                    <img src="top3.jpg" alt="Reason 3">
+                </div>
+                
+                <div class="trending-item">
+                    <span class="trending-number">4</span>
+                    <img src="top4.jpg" alt="Reason 4">
+                </div>
+
+                <div class="trending-item">
+                    <span class="trending-number">5</span>
+                    <img src="top5.jpg" alt="Reason 5">
+                </div>
+
+                </div>
+        </div>
+
+        <!-- Photo Slider with Match Percentages -->
+        <div class="row">
+            <h3>Our Best Photos</h3>
+            <div class="media-scroller">
+                
+                <!-- Item 1 -->
+                <div class="media-item">
+                    <img src="memory1.jpg" alt="Photo 1">
+                    <div class="media-details">
+                        <span class="match-text">100% Match</span> <span class="year-text">2024</span>
+                        <p>For our MOMENTS</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="media-item">
+                    <img src="memory2.jpg" alt="Photo 2">
+                    <div class="media-details">
+                        <span class="match-text">98% Match</span> <span class="year-text">New</span>
+                        <p>The best hug</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="media-item">
+                    <img src="memory3.jpg" alt="Photo 3">
+                    <div class="media-details">
+                        <span class="match-text">100% Match</span> <span class="year-text">Trending</span>
+                        <p>Being goofy together</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="media-item">
+                    <img src="memory4.jpg" alt="Photo 4">
+                    <div class="media-details">
+                        <span class="match-text">99% Match</span>
+                        <p>That one pefect trip</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <h3>Funny & Sweet Videos</h3>
+            <div class="media-scroller">
+                <video src="vid1.mp4" controls></video>
+                <video src="vid3.mp4" controls></video>
+                <video src="vid2.mp4" controls></video>
+                <video src="vid4.mp4" controls></video>
+                <video src="vid5.mp4" controls></video>
+            </div>
+        </div>
+
+    </div>
+    <!-- "Are You Still Watching?" Pop-up -->
+    <div id="still-watching-popup" class="popup-overlay hidden">
+        <div class="popup-box">
+            <h2>Are you still crying happy tears?</h2>
+            <div class="popup-buttons">
+                <button onclick="resumeWatching()">Yes</button>
+                <button onclick="resumeWatching()">Obviously</button>
+            </div>
+        </div>
+    </div>
+    <div id="pin-scr" class="screen hidden">
+        <div id="pin-bx" class="pin-box">
+            <h2>System Locked</h2>
+            <div id="pin-disp"></div>
+            <div class="keypad">
+                <button onclick="kp(1)">1</button>
+                <button onclick="kp(2)">2</button>
+                <button onclick="kp(3)">3</button>
+                <button onclick="kp(4)">4</button>
+                <button onclick="kp(5)">5</button>
+                <button onclick="kp(6)">6</button>
+                <button onclick="kp(7)">7</button>
+                <button onclick="kp(8)">8</button>
+                <button onclick="kp(9)">9</button>
+                <button onclick="clr()">C</button>
+                <button onclick="kp(0)">0</button>
+                <button onclick="chk()">E</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="let-scr" class="screen hidden">
+        <div class="let-box">
+            <h2>Happy Birthday</h2>
+            <p>Happy, Happy Birthday to the most beautiful, amazing, and absolutely perfect girl in the universe—my sweet Pranjal! 🎉👑💖
+
+I honestly can’t believe how lucky I am to have you in my life. Every single day with you feels like an absolute dream come true. You have this magical way of making everything brighter just by being you. Your smile is my favorite thing in the whole world, and hearing your laugh is like the best music to my ears. 🥺✨
+
+On your special day, I want you to know just how incredibly loved and cherished you are. You are my sunshine, my safe place, and my favorite person to do absolutely everything with. Whether we are going out on fun adventures or just being cozy and lazy together, every moment with you is my favorite moment. 🧸🌷
+
+I promise to always be your biggest cheerleader, your shoulder to lean on, and the one who loves you more and more with every passing second. I hope this year brings you as much joy, success, and pure happiness as you bring into my life every single day. You deserve the entire world and so much more, my love! 🌎💫
+
+Let’s make today the most amazing, unforgettable birthday ever. Get ready to be spoiled, because today is all about celebrating YOU! 🎂🥂🎁
+
+I love you to the moon and back, Pranjal! Happy Birthday, gorgeous! ❤️🥰🥳</p>
+            <p>Love you forever!</p>
+            <button class="play-btn" onclick="bk()">Back to Profiles</button>
+        </div>
+    </div>
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <!-- Replace birthday-song.mp3 with your actual audio file name -->
+        <source src="birthday-song.mp3" type="audio/mpeg">
+    </audio>
+    <script src="script.js"></script>
+</body>
+</html>
