@@ -19,7 +19,7 @@ function enterSite() {
 
 // --- BACKGROUND VIDEO LOOP LOGIC ---
 // IMPORTANT: Type the exact names of your videos inside these quotes!
-const bgVideos = ["vid1.mp4", "vid3.mp4", "vid4.mp4", "vid5.mp4"]; 
+const bgVideos = ["vid1.MP4", "vid3.MP4", "vid4.MP4", "vid5.MP4"]; 
 let currentVideoIndex = 0;
 
 function playBackgroundVideos() {
